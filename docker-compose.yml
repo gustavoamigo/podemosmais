@@ -1,0 +1,22 @@
+telescope:
+  image: telescopeapp/telescope
+  ports:
+   - "8080:80"
+  links:
+   - mongo
+  environment:
+   - ROOT_URL=http://127.0.0.1
+   - MONGO_URL=mongodb://mongo
+
+mongo:
+  image: mongo
+  ports:
+  - "27017:27017"
+  - "28017:28017"
+  command: mongod --rest
+
+wordpress:
+  image: wordpress
+  ports:
+    - "8081:80"
+  env_file: ./wordpress.env
