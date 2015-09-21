@@ -16,7 +16,7 @@ Ref: https://github.com/docker/compose/releases
     curl -L https://github.com/docker/compose/releases/download/1.4.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
     chmod +x /usr/local/bin/docker-compose
 
-Alterar o hosts para apontar para o podemosmais.tk, acrescentar a seguinte linha
+Alterar o `/etc/hosts` para apontar para o podemosmais.tk, acrescentar a seguinte linha
     
     127.0.0.1 podemosmais.tk comuna.pomdemomais.tk
 
