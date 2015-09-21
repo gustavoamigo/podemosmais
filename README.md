@@ -26,4 +26,7 @@ Subir o ambiente
      
      docker-compose up
      
-Depois, para baixar o ambiente     
+Depois, para baixar o ambiente.   
+
+     docker-compose stop
+
