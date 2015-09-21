@@ -1,12 +1,10 @@
 telescope:
   restart: always
   image: telescopeapp/telescope
-  ports:
-   - "8080:80"
   links:
    - mongo
   environment:
-   - ROOT_URL=http://127.0.0.1
+   - ROOT_URL=http://mongo
    - MONGO_URL=mongodb://mongo
 
 mongo:
@@ -20,8 +18,6 @@ mongo:
 wordpress:
   restart: always
   image: wordpress
-  ports:
-    - "8081:80"
   env_file: ./wordpress.env
 
 nginx:
