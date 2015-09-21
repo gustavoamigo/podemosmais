@@ -1,6 +1,5 @@
-restart: always
-
 telescope:
+  restart: always
   image: telescopeapp/telescope
   ports:
    - "8080:80"
@@ -11,6 +10,7 @@ telescope:
    - MONGO_URL=mongodb://mongo
 
 mongo:
+  restart: always
   image: mongo
   ports:
   - "27017:27017"
@@ -18,12 +18,14 @@ mongo:
   command: mongod --rest
 
 wordpress:
+  restart: always
   image: wordpress
   ports:
     - "8081:80"
   env_file: ./wordpress.env
 
 nginx:
+  restart: always
   image: nginx
   ports:
     - "80:80"
