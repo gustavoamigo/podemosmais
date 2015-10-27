@@ -4,7 +4,7 @@ telescope:
   links:
    - mongo
   environment:
-   - ROOT_URL=http://mongo
+   - ROOT_URL=http://comuna.podemosmais.tk
    - MONGO_URL=mongodb://mongo
 
 mongo:
